@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/productsTypeFragment">
+
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.firestore.ui.fragments.search.BasketFragment"
+        android:label="BasketFragment" >
+        <action
+            android:id="@+id/action_basketFragment_to_listRecipesFragment"
+            app:destination="@id/listRecipesFragment" />
+        <action
+            android:id="@+id/action_basketFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+        <action
+            android:id="@+id/action_basketFragment_to_productsTypeFragment"
+            app:destination="@id/productsTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listRecipesFragment"
+        android:name="com.example.firestore.ui.fragments.search.ListRecipesFragment"
+        android:label="ListRecipesFragment" >
+        <action
+            android:id="@+id/action_listRecipesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsTypeFragment"
+        android:name="com.example.firestore.ui.fragments.search.ProductsTypeFragment"
+        android:label="ProductsTypeFragment" >
+        <action
+            android:id="@+id/action_productsTypeFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+        <action
+            android:id="@+id/action_productsTypeFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomRecipesFragment"
+        android:name="com.example.firestore.ui.fragments.RandomRecipesFragment"
+        android:label="RandomRecipesFragment" >
+        <action
+            android:id="@+id/action_randomRecipesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.firestore.ui.fragments.RecipeFragment"
+        android:label="RecipeFragment" >
+        <argument
+            android:name="recipe"
+            app:argType="com.example.firestore.models.data.RecipeItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedRecipes"
+        android:name="com.example.firestore.ui.fragments.SavedRecipes"
+        android:label="SavedRecipes" >
+        <action
+            android:id="@+id/action_savedRecipes_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.firestore.ui.fragments.search.ProductsFragment"
+        android:label="ProductsFragment" >
+        <action
+            android:id="@+id/action_productsFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_productsTypeFragment"
+            app:destination="@id/productsTypeFragment" />
+        <argument
+            android:name="product"
+            app:argType="string" />
+    </fragment>
+</navigation>

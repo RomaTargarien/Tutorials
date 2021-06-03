@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/randomRecipesFragment"
+        android:title="Random Recipes"
+        android:icon="@drawable/ic_baseline_restaurant_24">
+    </item>
+
+    <item
+        android:id="@+id/productsTypeFragment"
+        android:title="Search Recipes"
+        android:icon="@drawable/ic_baseline_search_24">
+    </item>
+
+
+    <item
+        android:id="@+id/savedRecipes"
+        android:title="Saved Recipes"
+        android:icon="@drawable/ic_baseline_favorite_border_24">
+    </item>
+
+
+
+
+
+</menu>
